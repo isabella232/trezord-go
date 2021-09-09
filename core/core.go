@@ -605,6 +605,10 @@ func (c *Core) Call(
 
 func (c *Core) writeDev(body []byte, device io.Writer) error {
 	c.log.Log("decodeRaw")
+
+	fmt.Println("----------XXXX----------")
+	fmt.Println(body)
+	fmt.Println("----------YYYY----------")
 	msg, err := c.decodeRaw(body)
 	if err != nil {
 		return err
