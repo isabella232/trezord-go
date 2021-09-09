@@ -12,3 +12,14 @@ build and push emulator image:
   script:
     - docker-compose -f ./docker-compose.yml build
     - docker-compose -f ./docker-compose.yml push
+
+build test:
+  stage: test
+  image: golang
+  variables:
+    TEST: "build-local"
+  script:
+    - go version
+    - go build .
+  artifacts:
+    - trezord-go
