@@ -22,4 +22,6 @@ build test:
     - go version
     - go build .
   artifacts:
-    - trezord-go
+    name: "x"
+    paths:
+      - trezord-go
