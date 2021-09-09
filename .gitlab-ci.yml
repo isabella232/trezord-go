@@ -25,3 +25,4 @@ build test:
     name: "x"
     paths:
       - trezord-go
+
